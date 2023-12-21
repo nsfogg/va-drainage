@@ -1,6 +1,6 @@
-@font-face {
+z@font-face {
     font-family: 'Jockey One';
-    src: url('/va-drainage/src/assets/fonts/JockeyOne-Regular.ttf') format('truetype');
+    src: url('/src/assets/fonts/JockeyOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
@@ -70,7 +70,7 @@ h1 {
 }
 
 .image-section {
-    background-image: url('/va-drainage/src/images/water.png');
+    background-image: url('/src/images/water.png');
     margin: 0;
     padding: 0;
     background-size: cover;
