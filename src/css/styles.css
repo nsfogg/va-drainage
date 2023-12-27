@@ -248,7 +248,6 @@ h1 {
   float: left;
   width: 50%;
   margin: 0;
-  margin-top: -1px;
 }
 
 .wave-row {
@@ -268,6 +267,10 @@ h1 {
   width: 33.33%;
 }
 
+.row {
+  margin-top: -10px;
+}
+
 /* Clear floats after image containers */
 .row::after {
   content: "";
@@ -275,13 +278,8 @@ h1 {
   display: table;
 }
 
-img {
-  border: 0;
-}
-
 .yellow-background {
   background-color: #FFF7AE;
-  color: black;
-  padding: 30px;
   text-align: center;
+  margin-top: -16px;
 }
