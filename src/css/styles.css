@@ -242,3 +242,44 @@ h1 {
     visibility: visible;
     transform: translateY(-50%) translateX(0); /* Add this for the transition effect */
 }
+
+/* Two image containers */
+.column2 {
+  float: left;
+  width: 50%;
+  margin: 0;
+}
+
+.wave-row {
+  background-color: #183642;
+}
+
+/* Clear floats after image containers */
+.wave-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Three image containers */
+.column3 {
+  float: left;
+  width: 33.33%;
+}
+
+.row {
+  margin-top: -10px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.yellow-background {
+  background-color: #FFF7AE;
+  text-align: center;
+  margin-top: -16px;
+}
