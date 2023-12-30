@@ -33,3 +33,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Hide bubbles when clicking anywhere in the document
     document.addEventListener('click', hideBubbles);
 });
+
+
+
+
+
+let hamburger = document.querySelector('.hamburger');
+let menu = document.querySelector('.navbar');
+
+hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('isactive');
+    menu.classList.toggle('active');
+});
+
+
+
