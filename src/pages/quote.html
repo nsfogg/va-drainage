@@ -4,41 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VA Drainage - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/src/css/styles.css">
 </head>
 <body>
-    <header>
+    <header class="fade-in">
         <div class="header-container">
-            <img src="VA-drainage-logo.jpg" alt="VA Drainage Logo" class="logo">
+            <img src="/src/images/VA-drainage-logo.jpg" alt="VA Drainage Logo" class="logo">
             <div class="title-container">
                 <h1>VA DRAINAGE</h1>
             </div>
             <nav class="nav-links">
-                <a href="/va-drainage/src/quote.html">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <a href="/src/index.html">Home</a>
+                <a href="/src/pages/solutions.html">What I can Do</a>
+                <a href="/src/pages/quote.html">Request Quote</a>
             </nav>
         </div>
-    </header>    
-    
+    </header>
+    <section class="image-section">
+        <div class="content">
+           <h2>Request Quote</h2>
+        </div>
+    </section>    
+
     <main>
-        <section id="who-we-are">
-            <!-- Content for Who We Are -->
+        <section class="blue-background1">
+          <div class="content">
+            <div class="request-service-section">
+              <h2>Make Your Request</h2>
+              <p>To request a quote, please select the service you are interested in and fill in the form. We will get back to you with a detailed quote tailored to your needs.</p>
+              
+              <div class="form-container">
+                <div class="service-selection">
+                  <label><input type="checkbox" name="service" value="1"> Service of stuff</label>
+                  <label><input type="checkbox" name="service" value="2"> Service of stuff</label>
+                  <label><input type="checkbox" name="service" value="3"> Service of stuff</label>
+                  <label><input type="checkbox" name="service" value="4"> Service of stuff</label>
+                  <label><input type="checkbox" name="service" value="5"> Service of stuff</label>
+                </div>
+                
+                <form class="user-info-form" action = "https://formspree.io/f/xzbnpono" method = "POST">
+                  <input type="text" name="firstname" placeholder="First Name" required>
+                  <input type="text" name="lastname" placeholder="Last Name" required>
+                  <input type="text" name="phone" placeholder="Phone Number" required>
+                  <input type="text" name="address" placeholder="Address" required>
+                  <textarea name="additional-info" placeholder="Additional Info" required></textarea>
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
         </section>
-        
-        <section id="what-we-do">
-            <!-- Content for What We Do -->
-        </section>
-        
-        <section id="contact-us">
-            <!-- Contact form or contact information -->
-        </section>
-    </main>
+      </main>
+      
+
+    
     
     <footer>
-        <!-- Footer content -->
+        <footer>
+            <!-- wave divider -->
+            <div class="wave-row">
+              <img src="/src/assets/page-content/wave.svg" alt="Waves SVG" style="width:100%; display: block; margin: 0; padding: 0;"/>
+            </div>
+            <!-- contact and important info -->
+            <div class="yellow-background">
+              <p>VA Drainage LLC © 2023</p>
+              <div class="row">
+                <div class="column3">
+                  <p>(123) 456-7890</p>
+                </div>
+                <div class="column3">
+                  <p>
+                    M-F 9am - 5pm
+                  </p>
+                  <p>
+                    Sat. 9am - 5pm
+                  </p>
+                </div>
+                <div class="column3">
+                  <p>
+                    jbailey@va-drainage.com
+                  </p>
+                </div>
+              </div>
+            </div>
+        </footer>
     </footer>
     
-    <script src="script.js"></script>
+    <script src="/src/js/script.js"></script>
 </body>
 </html>

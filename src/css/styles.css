@@ -57,17 +57,127 @@ h1 {
 }
 
 
-.nav-links {
-    display: flex;
-    align-items: center;
+.navbar ul {
+  list-style-type: none; /* Removes the bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Align items horizontally */
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: black; 
-    padding: 0 10px; /* Adjust spacing between links */
-    font-size: 1em; 
+.navbar ul li {
+  padding: 0;
+  margin: 0; 
 }
+
+/* Style for the links */
+.navbar ul li a {
+  display: block;
+  padding: 2px 5px;
+  text-decoration: none;
+  color: black;
+
+  margin: 0 1px; 
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  /* Adjustments for small screens */
+  .navbar {
+      width: 100%;
+  }
+  
+.hamburger {
+  cursor: pointer;
+  transition: opacity .3s;
+  float: right; 
+  display: none; /* Initially hidden */
+}
+
+.hamburger .line {
+  width: 30px; 
+  height: 3px;
+  background-color: #000000; /* First and third line color */
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.hamburger .line:nth-child(2) {
+  background-color: #000000; /* Second line color */
+}
+
+.hamburger.isactive .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.isactive .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.hamburger.isactive .line:nth-child(2) {
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+      display: block; 
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: white;
+  display: none; 
+  position: absolute;
+  width: 50%; 
+  top: 60px; 
+  right: 0;
+  transition: all 2s ease-in-out;
+}
+
+.navbar.active {
+  display: block;
+  animation: fade .5s;
+}
+
+@keyframes fade {
+  from {
+      transform: translateX(-200px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0px);
+      opacity: 1;
+  }
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.navbar li {
+  padding: 10px 20px;
+}
+
+.navbar li a {
+  color: #ededed;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6em; /* Adjust as necessary */
+  transition: all .5s;
+}
+
+.navbar li:hover {
+  background-color: #ce3939;
+}
+}
+
+
 
 .image-section {
     background-image: url('/src/images/water.png');
@@ -282,4 +392,81 @@ h1 {
   background-color: #FFF7AE;
   text-align: center;
   margin-top: -16px;
+}
+
+
+.request-service-section {
+  text-align: center;
+}
+
+
+
+.blue-background {
+  background-color: #183642;
+  padding: 20px 0;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.request-service-section {
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 600px; /* Adjust this value to match the width of the text above */
+  margin: 0 auto; /* This centers the container */
+}
+
+.service-selection {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.service-selection label {
+  display: block;
+  margin: 10px 0;
+  color: white;
+}
+
+.user-info-form {
+  flex: 1; /* Changed from flex: 2 to flex: 1 to ensure it doesn't grow too large */
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info-form input,
+.user-info-form textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* This ensures the inputs take up the available width, no more */
+}
+
+.user-info-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+button {
+  background-color: #61A0AF;
+  color: white;
+  padding: 10px 20;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #264e58;
 }
