@@ -470,3 +470,51 @@ button {
 button:hover {
   background-color: #264e58;
 }
+
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  background-image: url('/src/images/water.png');
+  height: 50%;
+  filter: grayscale(60%) brightness(175%);
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* parallax scroll */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax h2 {
+  filter: blur(0);
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titlehead {
+  background-color: rgb(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.titlehead h2 {
+  color: black;
+  font-size: 3em;
+  font-family: 'Jockey One', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 60%
+}
