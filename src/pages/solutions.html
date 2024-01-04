@@ -9,24 +9,30 @@
 <body>
     <header class="fade-in">
         <div class="header-container">
-            <img src="/src/images/VA-drainage-logo.jpg" alt="VA Drainage Logo" class="logo">
             <div class="title-container">
-                <h1>VA DRAINAGE</h1>
+                <div class="logo-container">
+                    <img src="/src/images/VA-drainage-logo.jpg" alt="VA Drainage Logo" class="logo">
+                </div>
+                <div class="title">
+                    <h1>VA DRAINAGE</h1>
+                </div>
+                <div class="navbar-container">
+                    <menu class="navbar">
+                        <ul>
+                            <li><a href="/src/pages/me.html"><b>Who I Am</b></a></li>
+                            <li><a href="/src/pages/solutions.html"><b>What I can Do</b></a></li>
+                            <li><a href="/src/pages/quote.html"><b>Request Quote</b></a></li>
+                        </ul>
+                    </menu>
+                </div>
             </div>
             <div class="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-            <menu class="navbar">
-                <ul>
-                    <li><a href="/src/index.html"><b>Home</b></a></li>
-                    <li><a href="/src/pages/me.html"><b>Who I Am</b></a></li>
-                    <li><a href="/src/pages/quote.html"><b>Request Quote</b></a></li>
-                </ul>
-            </menu>
         </div>
-    </header>
+      </header>
     
     <section class="image-section">
         <div class="content">
@@ -82,8 +88,32 @@
                     </div>
                 </div>
             </div>
+
+            <div class="header-container">
+                <h2>Check Out Our Experience</h2>
+            </div>
+            <div class="slider">
+                <div class="slider__slide">
+                    <img src="/src/images/1.png" alt="demo image" />
+                </div>
+                <div class="slider__slide">
+                    <img src="/src/images/2.png" alt="demo image" />
+                </div>
+                <div class="slider__slide">
+                    <img src="/src/images/3.png" alt="demo image" />
+                </div>
+                <div class="slider__slide">
+                    <img src="/src/images/4.png" alt="demo image" />
+                </div>
+                <div class="slider__slide">
+                    <img src="/src/images/5.png" alt="demo image" />
+                </div>
+                <a class="slider__button slider__button--prev" onclick="prevSlide()">&lt;</a>
+                <a class="slider__button slider__button--next" onclick="nextSlide()">&gt;</a>
+            </div>
+            
         </section>
-        <div id="page-overlay"></div> <!-- Overlay for the entire page -->
+        <div id="page-overlay"></div> 
     </main>
     
     

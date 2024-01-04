@@ -35,9 +35,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-
-
-
 let hamburger = document.querySelector('.hamburger');
 let menu = document.querySelector('.navbar');
 
@@ -46,5 +43,38 @@ hamburger.addEventListener('click', function() {
     menu.classList.toggle('active');
 });
 
+const slides = document.querySelectorAll(".slider__slide");
+let currentSlide = 0;
 
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.opacity = (i === index) ? '1' : '0';
+    });
+}
 
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Initialize the first slide
+showSlide(currentSlide);
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
