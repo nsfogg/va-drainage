@@ -78,3 +78,18 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+window.addEventListener('scroll', function() {
+    var elements = document.querySelectorAll('.what-we-do-section1 h2, .what-we-do-section1 p');
+    for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+        var position = element.getBoundingClientRect();
+
+        // Checking if element is within viewport (you might adjust 'window.innerHeight' value)
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+            element.classList.add('animate');
+        } else {
+            element.classList.remove('animate'); // Optionally remove the class when out of view
+        }
+    }
+});

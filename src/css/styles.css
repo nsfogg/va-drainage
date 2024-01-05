@@ -48,11 +48,9 @@ justify-content: space-between;
 }
 
 .logo {
-width: 80px; 
-height: 80px; 
+width: 150px; 
+height: 100px; 
 margin-right: 20px;
-border-radius: 50%; 
-object-fit: cover; 
 }
 
 
@@ -347,6 +345,50 @@ transform: translateX(0);
     flex: 2;
     margin-right: 20px;
   }
+
+  .what-we-do-section1 h2, .what-we-do-section1 p {
+    opacity: 0; /* Start with elements invisible */
+    transform: translateY(80px); /* Optionally start them slightly lower */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Animation properties */
+}
+
+.what-we-do-section1 h2.animate, .what-we-do-section1 p.animate {
+    opacity: 1; /* End state of animation */
+    transform: translateY(0); /* End state of transform */
+}
+
+@keyframes fade {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.who-we-are-section1 {
+  overflow: hidden; /* Prevents elements sliding in from being visible outside the container */
+}
+
+.who-we-are-section1 h2 {
+  animation: fade 2.0s linear both;
+}
+
+@keyframes slideInFromRight {
+  from {
+      transform: translateX(100%); /* Start from right */
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0); /* End at its original position */
+      opacity: 1;
+  }
+}
+
+.who-we-are-section1 p {
+  animation: slideInFromRight 1.5s ease-out both;
+}
+
 
   .who-we-are-image1, .what-we-do-image1 {
     flex: 1;
